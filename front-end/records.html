@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>User List</title>
+  <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .container {
+      background-color: #f5f5dc;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #fff8dc;
+      color: #333;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    tbody tr:hover {
+      background-color: #f0ead6;
+    }
+
+    h1 {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <header class="background">
+      <h2>Records</h2>
+      <table id="tablaDetail" class="display" style="width: 100%">
+        <thead>
+          <tr>
+            ><th>UPC</th>
+            <th>Name Product</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+            <th class="text-center">
+              <button type="button" id="btn-add-new" class="btn btn-primary btn-sm">
+                Create
+              </button>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </header>
+  </div>
+
+  <!-- Modal for Add, Edit, and Delete -->
+  <div class="modal" id="actionModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Action</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="myForm">
+            <input type="hidden" name="user_id" id="user_id">
+            <div class="mb-2">
+              <label for="upc" class="form-label">UPC</label>
+              <input type="text" class="form-control" name="upc" id="name" placeholder="UPC" />
+            </div>
+            <div class="mb-2">
+              <label for="productname" class="form-label">Product name</label>
+              <input type="text" class="form-control" name="product name" id="product name" placeholder="Product name" />
+            </div>
+            <div class="mb-2">
+              <label for="product price" class="form-label">Product Price</label>
+              <input type="product price" class="form-control" name="product price" id="product price" placeholder="Product Price" />
+            </div>
+            <div class="mb-2">
+              <label for="product quantity" class="form-label">Product Quantity</label>
+              <input type="product quantity" class="form-control" name="product quantity" id="product quantity" placeholder="Product Quantity" />
+            </div>
+            <div class="mb-2">
+              <label for="role" class="form-label">Role</label>
+              <select name="role" id="role" class="form-control">
+                <option value="teacher">Usuario</option>
+                <option value="student">Proveedor</option>
+              </select>
+            </div>
+          </form>
+          <div id="modalMessages"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" id="btn-modal-crud-action" class="btn" data-dismiss="modal">
+            Action
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/users.js"></script>
+  <script src="./js/functions-tools.js"></script>
+</body>
+</html>

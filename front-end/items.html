@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Items</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <style>
+        .background {
+            background-color: black;
+        }
+    
+        .container {
+            background-color: #f5f5dc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        table {
+            border-collapse: collapse;
+        }
+    
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+    
+        th {
+            background-color: #fff8dc;
+            color: #333;
+        }
+    
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    
+        tbody tr:hover {
+            background-color: #f0ead6;
+        }
+    
+        h1 {
+            color: black;
+        }
+    </style>
+</head>
+
+<body class="background">
+    <div class="container mt-5">
+        <h1>Product Data List</h1>
+        <table id="tablaItems" class="table">
+            <thead>
+                <tr>
+                    <th>UPC</th>
+                    <th>Category Product</th>
+                    <th>Brand</th>
+                    <th>Batch</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>123456789012</td>
+                    <td>Beverages</td>
+                    <td>Coca-Cola</td>
+                    <td>Batch A1</td>
+                </tr>
+                <tr>
+                    <td>987654321098</td>
+                    <td>Snacks</td>
+                    <td>Lays</td>
+                    <td>Batch B2</td>
+                </tr>
+                <tr>
+                    <td>456789123456</td>
+                    <td>Dairy</td>
+                    <td>Yoplait</td>
+                    <td>Batch C3</td>
+                </tr>
+                <!-- Table data will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <!-- Custom Script -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
